@@ -20,10 +20,10 @@ export function App(props) {
     <MuiThemeProvider muiTheme={appTheme}>
       <AppWrapper>
         <Helmet
-          titleTemplate="POC Referidos"
-          defaultTitle="POC Referidos"
+          titleTemplate="Sistema"
+          defaultTitle="Sistema"
           meta={[
-            { name: 'description', content: 'POC Referidos' },
+            { name: 'description', content: 'Sistema' },
           ]}
         />
         <div id="principal">
