@@ -6,7 +6,6 @@ import { Row, Col } from 'react-flexbox-grid';
 import { Card, CardActions, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
-import PrincipalContainer from '../../components/containers/PrincipalContainer';
 
 import { login } from '../../containers/LoginPage/actions';
 import {
@@ -87,14 +86,10 @@ export class LoginPage extends React.Component { // eslint-disable-line react/pr
     }
 
     return (
-      <PrincipalContainer>
+      <div>
         <Row middle="lg">
           <Col xsOffset={3} xs={6}>
             <Card>
-              <CardTitle
-                title="Sistema Web Referidos"
-                subtitle="Iniciar sesión"
-              />
               <CardText>
                 <TextField
                   name="txtUsuario"
@@ -118,7 +113,7 @@ export class LoginPage extends React.Component { // eslint-disable-line react/pr
             </Card>
           </Col>
         </Row>
-      </PrincipalContainer>
+      </div>
     );
   }
 }

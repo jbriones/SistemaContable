@@ -12,13 +12,7 @@ import request from 'utils/request';
 
 export function* login(data) {
   try {
-    const form = data.form;
-    if (form.usuario == 'Bci2018referidost3st' && form.clave=='mL9dhn5gQSS89ZVvhx9hPbHmLW7A'){
-      yield put(logged(form));
-    }else{
-      yield put(loginError('Error al iniciar sesión'));
-    }
-    //
+    // TODO login
   } catch (err) {
     yield put(loginError('Error al iniciar sesión'));
   }

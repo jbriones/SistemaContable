@@ -11,10 +11,6 @@ import 'sanitize.css/sanitize.css';
 import App from 'containers/App';
 import { makeSelectLocationState } from 'containers/App/selectors';
 
-// Import fonts
-import '!!style-loader!css-loader!./fonts/AvenirBook/stylesheet.css';
-import '!!style-loader!css-loader!./fonts/AvenirLight/stylesheet.css';
-
 /* eslint-disable import/no-webpack-loader-syntax */
 import '!file-loader?name=[name].[ext]!./favicon.ico';
 import '!file-loader?name=[name].[ext]!./manifest.json';

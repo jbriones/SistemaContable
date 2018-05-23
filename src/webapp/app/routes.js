@@ -26,34 +26,10 @@ export default function createRoutes(store) {
           import('containers/LoginPage/sagas'),
           import('containers/LoginPage'),
         ]);
-
         const renderRoute = loadModule(cb);
-
         importModules.then(([reducer, sagas, component]) => {
           injectReducer('login', reducer.default);
           injectSagas(sagas.default);
-
-          renderRoute(component);
-        });
-        importModules.catch(errorLoading);
-      },
-    },
-    {
-      path: '/principal',
-      name: 'principal',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/PrincipalPage/reducer'),
-          import('containers/PrincipalPage/sagas'),
-          import('containers/PrincipalPage'),
-        ]);
-
-        const renderRoute = loadModule(cb);
-
-        importModules.then(([reducer, sagas, component]) => {
-          injectReducer('principal', reducer.default);
-          injectSagas(sagas.default);
-
           renderRoute(component);
         });
         importModules.catch(errorLoading);
